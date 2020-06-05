@@ -1,0 +1,32 @@
+# Static App Should Haves
+1. **** The header should have h1 title with text 'PAYE Calculator'.
+2. There should be a form to calculate PAYE.
+3. **** The form should have PAYE calculation rate year select options (2020).
+4. **** The form should have gross salary input.
+5. **** The form should have NSSF rate radio options (old / new tier).
+6. **** The form should have Disability tax exemption eligibility checkbox.
+7. The form should have a submit button labelled 'Calculate';
+
+# Events testable Requirements
+8. On submit a function is called that validates input and returns an error if fails.
+
+# CalculatePaye Pure Function Requirements **************************************************************************************
+8. **** calculatePaye function should be pure and calculates PAYE given Gross Salary, nssf and isExempted.
+9. **** Should return an object with grossPay, nssf, totalDeductions, taxablePay, relief and paye properties. 
+10. **** Should return 0 if given no arguments at all.
+11. **** Should return 0 if given no gross salary argument.
+12. **** Should apply tax exemption if exemption isExempted is true.
+13. **** Should use tax exemption false if exemption argument is not given to it.
+14. **** Should return an error if grossPay and nssf are not of typeof number.
+
+# CalculateNssf Pure Function Requirements
+15. **** calculateNssf function should be pure and calculates NSSF deduction amount based on rate selected and gross Salary.
+16. **** Should return NSSF rate (6%) of the gross income for grossPay less than or equal to 18,000.
+17. **** Should return 1080 for all grossPay above 18,000.
+18. **** Should return 0 if given no arguments.
+19. **** Should return an error if grossPay argument is not of typeof number.
+
+# Results Static Requirements
+20. Results section should only show when returning PAYE calculation.
+21. Results section should have h2 title with text 'Results'.
+22. PAYE results should be in table format.

@@ -1,0 +1,6 @@
+1. Calculates and returns PAYE calculation given gross salary.
+2. Calculates PAYE according to the rates of the years selected (2019, 2020).
+3. Calculates taxable pay according to the NSSF rate selected (old or new tier).
+4. Applys Disabilty tax exemption on calculations if the option is selected.
+5. Returns a frieldy error message when the form submission validation fails.
+6. Returns PAYE calculation in a table format below the PAYE form.
