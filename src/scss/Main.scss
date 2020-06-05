@@ -1,0 +1,16 @@
+/* Colors ===================================== */
+$heading-color: #61dafb;
+$dark: #8791a5;
+$border: #d3d3d3;
+$white: #fff;
+$background: #f3f3f3;
+$error: #ff0000;
+
+/* Mixins ===================================== */
+@mixin border-radius($a, $b, $c, $d) {
+  border-radius: $a $b $c $d;
+  -webkit-border-radius: $a $b $c $d;
+  -moz-border-radius: $a $b $c $d;
+  -o-border-radius: $a $b $c $d;
+  -khtml-border-radius: $a $b $c $d;
+}
