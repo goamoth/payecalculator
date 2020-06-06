@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator Renders correctly 1`] = `
+<div
+  className="row cal-wrapper"
+>
+  <div
+    className="col-12"
+  >
+    <div
+      className="row header-wrapper"
+    >
+      <div
+        className="col-12"
+      >
+        <h1
+          className="normal-heading"
+        >
+          PAYE Calculator
+        </h1>
+      </div>
+    </div>
+    <div
+      className="row form-wrapper"
+    >
+      <div
+        className="col-12"
+      >
+        <form
+          className="theForm"
+        >
+          <div
+            className="form-group"
+          >
+            <label
+              for="year"
+            >
+               Taxation Year: 
+            </label>
+            <select
+              className="custom-select"
+              id="year"
+              name="year"
+            >
+              <option
+                value="2020"
+              >
+                2020
+              </option>
+            </select>
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              for="grossPay"
+            >
+               Gross Income: 
+            </label>
+            <input
+              className="form-control"
+              id="grossPay"
+              name="grossPay"
+              placeholder="75000"
+              type="number"
+            />
+          </div>
+          <div
+            className="form-group"
+          >
+            <label
+              for="nssf"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
+            >
+               NSSF Contribution: 
+            </label>
+            <div
+              className="custom-control custom-radio custom-control-inline"
+            >
+              <input
+                className="custom-control-input"
+                id="old"
+                name="nssf"
+                type="radio"
+                value="old"
+              />
+              <label
+                className="custom-control-label"
+                for="old"
+              >
+                 Old (200) 
+              </label>
+            </div>
+            <div
+              className="custom-control custom-radio custom-control-inline"
+            >
+              <input
+                className="custom-control-input"
+                id="new"
+                name="nssf"
+                type="radio"
+                value="new"
+              />
+              <label
+                className="custom-control-label"
+                for="new"
+              >
+                 New (Tiered) 
+              </label>
+            </div>
+          </div>
+          <div
+            className="form-group disability"
+          >
+            <div
+              className="custom-control custom-checkbox"
+            >
+              <input
+                className="custom-control-input"
+                id="isExempted"
+                name="isExempted"
+                type="checkbox"
+              />
+              <label
+                className="custom-control-label"
+                for="isExempted"
+              >
+                 I have Disability Tax Exemption Certificate 
+              </label>
+            </div>
+          </div>
+          <div
+            className="form-group"
+          >
+            <button
+              className="btn btn-primary"
+              type="submit"
+            >
+              Calculate
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

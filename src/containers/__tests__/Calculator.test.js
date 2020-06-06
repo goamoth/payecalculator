@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Calculator from '../Calculator';
+import renderer from 'react-test-renderer';
 
 describe('Calculator', () => {
    let mountedCal;
@@ -11,6 +12,11 @@ describe('Calculator', () => {
 
    it('renders without crashing', () => {
       expect(mountedCal).toBeDefined();
+   });
+
+   it('Renders correctly', () => {
+      const tree = renderer.create(<Calculator />).toJSON();
+      expect(tree).toMatchSnapshot();
    });
 
    it('Renders Header Component', () => {
