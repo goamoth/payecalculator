@@ -1,0 +1,17 @@
+ @import './Main.scss';
+
+.form-wrapper {
+  margin: 30px 30px;
+}
+
+.disability {
+  border: 1px solid $background2;
+  padding: 15px 25px;
+  margin: 25px 0;
+  @include border-radius(5px, 5px, 5px, 5px);
+  background: $background2;
+}
+
+.form-group {
+  margin: 0 0 30px;
+}

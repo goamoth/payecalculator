@@ -23,7 +23,7 @@ class Header extends Component {
       }
       
       return (
-         <div className="row">
+         <div className="row header-wrapper">
             <div className="col-12">
                {header}
             </div>

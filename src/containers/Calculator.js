@@ -9,7 +9,6 @@ class Calculator extends Component {
          <div className="row cal-wrapper">
             <div className="col-12">
                <Header headerType="h1" headerText="PAYE Calculator" />
-               <Header headerType="" headerText="PAYE Calculator" />
                <Form />
             </div>
          </div>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import '../scss/Form.scss';
 
 class Form extends Component {
    render() {
       return (
-         <div className="row">
+         <div className="row form-wrapper">
             <div className="col-12">
 
                <form className="theForm">
@@ -22,16 +23,16 @@ class Form extends Component {
                   <div className="form-group">
                      <label for="nssf" style={{display: "block"}}> NSSF Contribution: </label>
                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" name="nssf" id="nssf" value="old" />
-                        <label for="nssf" className="custom-control-label"> Old (200) </label>
+                        <input type="radio" className="custom-control-input" name="nssf" id="old" value="old" />
+                        <label for="old" className="custom-control-label"> Old (200) </label>
                      </div>
                      <div className="custom-control custom-radio custom-control-inline">
-                        <input type="radio" className="custom-control-input" name="nssf" id="nssf" value="new" />
-                        <label for="nssf" className="custom-control-label"> New (Tiered) </label>
+                        <input type="radio" className="custom-control-input" name="nssf" id="new" value="new" />
+                        <label for="new" className="custom-control-label"> New (Tiered) </label>
                      </div>
                   </div>
 
-                  <div className="form-group">
+                  <div className="form-group disability">
                      <div className="custom-control custom-checkbox">
                         <input type="checkbox" className="custom-control-input" name="isExempted" id="isExempted" />
                         <label for="isExempted" className="custom-control-label"> I have Disability Tax Exemption Certificate </label>

@@ -1,12 +1,17 @@
-/* Colors ===================================== */
-$heading-color: #61dafb;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+$open-sans: 'Open Sans', sans-serif;
+
+/* Colors */
+$heading-color: #1e90ff;
 $dark: #8791a5;
 $border: #d3d3d3;
 $white: #fff;
 $background: #f3f3f3;
+$background2: #e4e4e4;
 $error: #ff0000;
 
-/* Mixins ===================================== */
+/* Mixins */
 @mixin border-radius($a, $b, $c, $d) {
   border-radius: $a $b $c $d;
   -webkit-border-radius: $a $b $c $d;
