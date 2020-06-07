@@ -29,4 +29,5 @@
 # Results Static Requirements
 20. Results section should only show when returning PAYE calculation.
 21. **** Results section should have h2 title with text 'Results'.
-22. PAYE results should be in table format.
+22. **** Displays a table with rows for each property of the returned results.
+23. **** Should be displayed on the Calculator component below the form.

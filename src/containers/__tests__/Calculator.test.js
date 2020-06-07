@@ -28,4 +28,9 @@ describe('Calculator', () => {
       const mountedForm = mountedCal.find('Form');
       expect(mountedForm.length).toBe(1);
    });
+
+   it('Renders Results component', () => {
+      const mountedResults = mountedCal.find('Results');
+      expect(mountedResults.length).toBe(1);
+   });
 });

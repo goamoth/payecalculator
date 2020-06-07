@@ -17,7 +17,11 @@ describe('Results', () => {
       expect( wrapper.find('Header[headerText="Results"]').length ).toBe(1);
    });
 
-   it('displays a table with className table', () => {
+   it('Displays a table with className table', () => {
       expect( wrapper.find('table.table').length ).toBe(1);
+   });
+
+   it('Displays 6 rows in the results table', () => {
+      expect( wrapper.find('.table tr').length ).toBe(6);
    });
 });
