@@ -41,3 +41,43 @@ describe('PAYE Form', () => {
       expect( submitBtn.text() ).toEqual('Calculate');
    });
 });
+
+describe('When Callback Fn Props is passed to it', () => {
+   let wrapper;
+   let mockCallback; 
+
+   beforeEach( () => { 
+      mockCallback = jest.fn();
+      wrapper = shallow(<Form changeHandler={mockCallback} />);
+   });
+   
+   it('Year select calls a Fn passed to it on change', () => {
+      //const mockCallback = jest.fn();
+      wrapper.find('select#year').simulate('change');
+      expect(mockCallback.mock.calls.length).toBe(1);
+   });
+
+   it('GrossPay input calls a Fn passed to it on change', () => {
+      //const mockCallback = jest.fn();
+      wrapper.find('input#grossPay').simulate('change');
+      expect(mockCallback.mock.calls.length).toBe(1);
+   });
+
+   it('Nssf old radio input calls a Fn passed to it on change', () => {
+      //const mockCallback = jest.fn();
+      wrapper.find('input#old').simulate('change');
+      expect(mockCallback.mock.calls.length).toBe(1);
+   });
+
+   it('Nssf new radio input calls a Fn passed to it on change', () => {
+      //const mockCallback = jest.fn();
+      wrapper.find('input#new').simulate('change');
+      expect(mockCallback.mock.calls.length).toBe(1);
+   });
+
+   it('isExempted checkbox calls a Fn passed to it on change', () => {
+      //const mockCallback = jest.fn();
+      wrapper.find('input#isExempted').simulate('change');
+      expect(mockCallback.mock.calls.length).toBe(1);
+   });
+});

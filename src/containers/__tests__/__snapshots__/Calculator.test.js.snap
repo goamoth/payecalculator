@@ -43,9 +43,15 @@ exports[`Calculator Renders correctly 1`] = `
               name="year"
             >
               <option
+                selected={true}
+                value=""
+              >
+                 - Select Year - 
+              </option>
+              <option
                 value="2020"
               >
-                2020
+                 2020 
               </option>
             </select>
           </div>
