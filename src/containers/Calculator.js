@@ -8,12 +8,10 @@ class Calculator extends Component {
    constructor(props) {
       super(props);
       this.state = {
+         year: '',
          grossPay: 0,
-         nssf: 0,
-         totalDeductions: 0,
-         taxablePay: 0,
-         relief: 0,
-         paye: 0
+         nssf: '',
+         isExempted: false
       };
       
    }
