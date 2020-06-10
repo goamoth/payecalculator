@@ -14,7 +14,8 @@ class Calculator extends Component {
          grossPay: 0,
          nssf: '',
          isExempted: false,
-         payeCal: {}
+         payeCal: {},
+         isSubmitted: false
       };
       
       this.resultsRef = React.createRef();
@@ -53,7 +54,8 @@ class Calculator extends Component {
 
       if (payeResults) {
          this.setState({
-            payeCal: payeResults
+            payeCal: payeResults,
+            isSubmitted: true
          });
 
          this.resultsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -74,8 +76,8 @@ class Calculator extends Component {
 
             <div className="w-100"></div>
 
-            <div className="col-12">
-               <Results {...this.state.payeCal} refProps={this.resultsRef} />
+            <div className="col-12" ref={this.resultsRef}>
+               { this.state.isSubmitted && <Results {...this.state.payeCal} refProps={this.resultsRef} /> }
             </div>
          </div>
       );

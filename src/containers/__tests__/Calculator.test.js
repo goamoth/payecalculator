@@ -29,10 +29,10 @@ describe('Calculator', () => {
       expect(mountedForm.length).toBe(1);
    });
 
-   it('Renders Results component', () => {
+   /*it('Renders Results component', () => {
       const mountedResults = mountedCal.find('Results');
       expect(mountedResults.length).toBe(1);
-   });
+   });*/
 
    it('Updates state with input passed to it', () => {
       let mockEvent = {target: {
