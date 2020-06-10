@@ -11,14 +11,22 @@ class Form extends Component {
                   <div className="form-group">
                      <label htmlFor="year"> Taxation Year: </label>
                      <select name="year" id="year" className="custom-select" value={this.props.year} onChange={this.props.changeHandler} required>
-                        <option value="" selected> - Select Year - </option>
+                        <option value="" selected> Select year... </option>
                         <option value="2020"> 2020 </option>
                      </select>
                   </div>
 
                   <div className="form-group">
                      <label htmlFor="grossPay"> Gross Income: </label>
-                     <input type="number" className="form-control" id="grossPay" name="grossPay" placeholder="75000" value={this.props.grossPay} onChange={ this.props.changeHandler } required />
+                     <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                           <span className="input-group-text">KES</span>
+                        </div>
+                        <input type="number" className="form-control" id="grossPay" name="grossPay" placeholder="75000" value={this.props.grossPay} onChange={ this.props.changeHandler } required aria-label="Gross Income Input" />
+                        <div className="input-group-append">
+                           <span className="input-group-text">.00</span>
+                        </div>
+                     </div>
                   </div>
 
                   <div className="form-group">

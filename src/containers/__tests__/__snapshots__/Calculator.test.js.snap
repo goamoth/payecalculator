@@ -50,7 +50,7 @@ exports[`Calculator Renders correctly 1`] = `
                 selected={true}
                 value=""
               >
-                 - Select Year - 
+                 Select year... 
               </option>
               <option
                 value="2020"
@@ -67,16 +67,39 @@ exports[`Calculator Renders correctly 1`] = `
             >
                Gross Income: 
             </label>
-            <input
-              className="form-control"
-              id="grossPay"
-              name="grossPay"
-              onChange={[Function]}
-              placeholder="75000"
-              required={true}
-              type="number"
-              value={0}
-            />
+            <div
+              className="input-group mb-3"
+            >
+              <div
+                className="input-group-prepend"
+              >
+                <span
+                  className="input-group-text"
+                >
+                  KES
+                </span>
+              </div>
+              <input
+                aria-label="Gross Income Input"
+                className="form-control"
+                id="grossPay"
+                name="grossPay"
+                onChange={[Function]}
+                placeholder="75000"
+                required={true}
+                type="number"
+                value={0}
+              />
+              <div
+                className="input-group-append"
+              >
+                <span
+                  className="input-group-text"
+                >
+                  .00
+                </span>
+              </div>
+            </div>
           </div>
           <div
             className="form-group"

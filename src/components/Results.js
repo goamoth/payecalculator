@@ -13,27 +13,27 @@ class Results extends Component {
                   <tbody>
                      <tr>
                         <td> Gross Income: </td>
-                        <td> { this.props.grossPay ? (this.props.grossPay).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.grossPay ? (this.props.grossPay).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> NSSF Contribution: </td>
-                        <td> { this.props.nssf ? (this.props.nssf).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.nssf ? (this.props.nssf).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Total Deduction: </td>
-                        <td> { this.props.totalDeductions ? (this.props.totalDeductions).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.totalDeductions ? (this.props.totalDeductions).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Taxable Income: </td>
-                        <td> { this.props.taxablePay ? (this.props.taxablePay).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.taxablePay ? (this.props.taxablePay).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Personal Relief: </td>
-                        <td> { this.props.relief ? (this.props.relief).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.relief ? (this.props.relief).toLocaleString() : 0 } </td>
                      </tr>
-                     <tr>
+                     <tr className="paye-results">
                         <td> PAYE: </td>
-                        <td> { this.props.paye ? (this.props.paye).toLocaleString() : 0 } </td>
+                        <td> Kes { this.props.paye ? (this.props.paye).toLocaleString() : 0 } </td>
                      </tr>
                   </tbody>
                </table>
