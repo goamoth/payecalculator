@@ -21,6 +21,12 @@ class Calculator extends Component {
       this.resultsRef = React.createRef();
    }
 
+   componentDidUpdate() {
+      if (this.state.isSubmitted) {
+         this.resultsRef.current.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'nearest' });
+      }
+   }
+
    handleChange = (e) => {
       let name = e.target.name;
 
@@ -58,7 +64,7 @@ class Calculator extends Component {
             isSubmitted: true
          });
 
-         this.resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+         //this.resultsRef.current.scrollIntoView({ block: 'start', behavior: 'smooth', inline: 'nearest' });
 
       } else {
          console.log("Oops! Can't compute Paye!");
