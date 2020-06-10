@@ -13,27 +13,27 @@ class Results extends Component {
                   <tbody>
                      <tr>
                         <td> Gross Income: </td>
-                        <td> Year: {this.props.year} - GrossPay: {this.props.grossPay} - NSSF: {this.props.nssf} - isExempted: {this.props.isExempted} </td>
+                        <td> { this.props.grossPay } </td>
                      </tr>
                      <tr>
                         <td> NSSF Contribution: </td>
-                        <td> 0 </td>
+                        <td> { this.props.nssf } </td>
                      </tr>
                      <tr>
                         <td> Total Deduction: </td>
-                        <td> 0 </td>
+                        <td> { this.props.totalDeductions } </td>
                      </tr>
                      <tr>
                         <td> Taxable Income: </td>
-                        <td> 0 </td>
+                        <td> { this.props.taxablePay } </td>
                      </tr>
                      <tr>
                         <td> Personal Relief: </td>
-                        <td> 0 </td>
+                        <td> { this.props.relief } </td>
                      </tr>
                      <tr>
                         <td> PAYE: </td>
-                        <td> 0 </td>
+                        <td> { this.props.paye } </td>
                      </tr>
                   </tbody>
                </table>

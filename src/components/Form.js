@@ -10,7 +10,7 @@ class Form extends Component {
                <form className="theForm" onSubmit={ this.props.onSubmit }>
                   <div className="form-group">
                      <label htmlFor="year"> Taxation Year: </label>
-                     <select name="year" id="year" className="custom-select" value={this.props.year} onChange={this.props.changeHandler}>
+                     <select name="year" id="year" className="custom-select" value={this.props.year} onChange={this.props.changeHandler} required>
                         <option value="" selected> - Select Year - </option>
                         <option value="2020"> 2020 </option>
                      </select>
@@ -18,7 +18,7 @@ class Form extends Component {
 
                   <div className="form-group">
                      <label htmlFor="grossPay"> Gross Income: </label>
-                     <input type="number" className="form-control" id="grossPay" name="grossPay" placeholder="75000" value={this.props.grossPay} onChange={ this.props.changeHandler } />
+                     <input type="number" className="form-control" id="grossPay" name="grossPay" placeholder="75000" value={this.props.grossPay} onChange={ this.props.changeHandler } required />
                   </div>
 
                   <div className="form-group">
@@ -35,7 +35,7 @@ class Form extends Component {
 
                   <div className="form-group disability">
                      <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" name="isExempted" id="isExempted" value="true" checked={this.props.isExempted === 'true'} onChange={ this.props.changeHandler } />
+                        <input type="checkbox" className="custom-control-input" name="isExempted" id="isExempted" value={true} checked={this.props.isExempted === true} onChange={ this.props.changeHandler } />
                         <label htmlFor="isExempted" className="custom-control-label"> I have Disability Tax Exemption Certificate </label>
                      </div>
                   </div>

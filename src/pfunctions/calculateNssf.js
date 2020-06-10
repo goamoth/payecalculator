@@ -1,4 +1,7 @@
 function calculateNssf(grossPay) {
+   // This function is used only to calculate New(tiered) NSSF values. 
+   // Old values for all grossPays is 200.
+
    try {
       let nssf;
 

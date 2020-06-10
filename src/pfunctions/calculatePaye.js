@@ -1,6 +1,10 @@
 function calculatePaye(grossPay, nssf, isExempted) {
    try {
-      if (!grossPay && !nssf && !isExempted || !grossPay) {
+      if (!grossPay && !nssf && !isExempted) {
+         return 0;
+      }
+
+      if (!grossPay) {
          return 0;
       }
 
@@ -17,10 +21,10 @@ function calculatePaye(grossPay, nssf, isExempted) {
 
       let tax = 0, paye = 0, taxablePay = 0, totalDeductions = 0, payeCal = {}, relief = 2400;
 
-      if (isExempted == true && grossPay <= 150000) {
+      if (isExempted === true && grossPay <= 150000) {
          totalDeductions = grossPay + nssf;
          taxablePay = 0;
-      } else if (isExempted == true && grossPay > 150000) {
+      } else if (isExempted === true && grossPay > 150000) {
          totalDeductions = 150000 + nssf;
          taxablePay = grossPay - totalDeductions;
       } else if (grossPay <= 24000) {
@@ -40,7 +44,7 @@ function calculatePaye(grossPay, nssf, isExempted) {
          for (let rate of currentRates) {
             let [mr, r] = rate;
    
-            if (tp > mr && mr != 1) {
+            if (tp > mr && mr !== 1) {
                tax += mr * r;
                tp -= mr;
             } else {
@@ -60,7 +64,7 @@ function calculatePaye(grossPay, nssf, isExempted) {
          totalDeductions,
          taxablePay,
          relief,
-         paye
+         paye: paye > 0 ? paye : 0
       };
 
       return payeCal;

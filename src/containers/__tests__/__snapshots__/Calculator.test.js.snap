@@ -43,6 +43,7 @@ exports[`Calculator Renders correctly 1`] = `
               id="year"
               name="year"
               onChange={[Function]}
+              required={true}
               value=""
             >
               <option
@@ -72,6 +73,7 @@ exports[`Calculator Renders correctly 1`] = `
               name="grossPay"
               onChange={[Function]}
               placeholder="75000"
+              required={true}
               type="number"
               value={0}
             />
@@ -140,7 +142,7 @@ exports[`Calculator Renders correctly 1`] = `
                 name="isExempted"
                 onChange={[Function]}
                 type="checkbox"
-                value="true"
+                value={true}
               />
               <label
                 className="custom-control-label"
@@ -198,14 +200,7 @@ exports[`Calculator Renders correctly 1`] = `
                  Gross Income: 
               </td>
               <td>
-                 Year: 
-                
-                 - GrossPay: 
-                0
-                 - NSSF: 
-                
-                 - isExempted: 
-                false
+                 
                  
               </td>
             </tr>
@@ -214,7 +209,8 @@ exports[`Calculator Renders correctly 1`] = `
                  NSSF Contribution: 
               </td>
               <td>
-                 0 
+                 
+                 
               </td>
             </tr>
             <tr>
@@ -222,7 +218,8 @@ exports[`Calculator Renders correctly 1`] = `
                  Total Deduction: 
               </td>
               <td>
-                 0 
+                 
+                 
               </td>
             </tr>
             <tr>
@@ -230,7 +227,8 @@ exports[`Calculator Renders correctly 1`] = `
                  Taxable Income: 
               </td>
               <td>
-                 0 
+                 
+                 
               </td>
             </tr>
             <tr>
@@ -238,7 +236,8 @@ exports[`Calculator Renders correctly 1`] = `
                  Personal Relief: 
               </td>
               <td>
-                 0 
+                 
+                 
               </td>
             </tr>
             <tr>
@@ -246,7 +245,8 @@ exports[`Calculator Renders correctly 1`] = `
                  PAYE: 
               </td>
               <td>
-                 0 
+                 
+                 
               </td>
             </tr>
           </tbody>

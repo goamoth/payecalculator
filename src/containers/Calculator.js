@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Form from '../components/Form';
 import Results from '../components/Results';
 import '../scss/Calculator.scss';
+import calculateNssf from '../pfunctions/calculateNssf';
+import calculatePaye from '../pfunctions/calculatePaye';
 
 class Calculator extends Component {
    constructor(props) {
@@ -11,9 +13,9 @@ class Calculator extends Component {
          year: '',
          grossPay: 0,
          nssf: '',
-         isExempted: 'false'
-      };
-      
+         isExempted: false,
+         payeCal: {}
+      }; 
    }
 
    handleChange = (e) => {
@@ -21,7 +23,7 @@ class Calculator extends Component {
 
       if (e.target.name === 'isExempted') {
          this.setState( (prevState) => {
-            let isChecked = prevState.isExempted === 'false' ? 'true' : 'false';
+            let isChecked = prevState.isExempted === false ? true : false;
             return {
                isExempted: isChecked
             }
@@ -37,7 +39,24 @@ class Calculator extends Component {
 
    onSubmit = (e) => {
       e.preventDefault();
-      alert('Hola! Am now on the parent Component!');
+      let nssfValue;
+      
+      if (this.state.nssf === 'new') {
+         nssfValue = calculateNssf(+this.state.grossPay); 
+      } else {
+         nssfValue = 200;
+      }
+
+      const payeResults = calculatePaye(+this.state.grossPay, nssfValue, this.state.isExempted);
+
+      if (payeResults) {
+         this.setState({
+            payeCal: payeResults
+         });
+      } else {
+         console.log("Oops! Can't compute Paye!");
+      }
+
    };
 
    render() {
@@ -51,7 +70,7 @@ class Calculator extends Component {
             <div className="w-100"></div>
 
             <div className="col-12">
-               <Results {...this.state} />
+               <Results {...this.state.payeCal} />
             </div>
          </div>
       );
