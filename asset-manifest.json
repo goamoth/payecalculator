@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/payecalculator/static/css/main.8f499f8d.chunk.css",
+    "main.js": "/payecalculator/static/js/main.2d8dfdf6.chunk.js",
+    "main.js.map": "/payecalculator/static/js/main.2d8dfdf6.chunk.js.map",
+    "runtime-main.js": "/payecalculator/static/js/runtime-main.70b62fc7.js",
+    "runtime-main.js.map": "/payecalculator/static/js/runtime-main.70b62fc7.js.map",
+    "static/js/2.4596f424.chunk.js": "/payecalculator/static/js/2.4596f424.chunk.js",
+    "static/js/2.4596f424.chunk.js.map": "/payecalculator/static/js/2.4596f424.chunk.js.map",
+    "index.html": "/payecalculator/index.html",
+    "precache-manifest.245447a85a226a8bff905bb943c6712d.js": "/payecalculator/precache-manifest.245447a85a226a8bff905bb943c6712d.js",
+    "service-worker.js": "/payecalculator/service-worker.js",
+    "static/css/main.8f499f8d.chunk.css.map": "/payecalculator/static/css/main.8f499f8d.chunk.css.map",
+    "static/js/2.4596f424.chunk.js.LICENSE.txt": "/payecalculator/static/js/2.4596f424.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70b62fc7.js",
+    "static/js/2.4596f424.chunk.js",
+    "static/css/main.8f499f8d.chunk.css",
+    "static/js/main.2d8dfdf6.chunk.js"
+  ]
+}
