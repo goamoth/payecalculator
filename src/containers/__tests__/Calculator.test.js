@@ -33,4 +33,13 @@ describe('Calculator', () => {
       const mountedResults = mountedCal.find('Results');
       expect(mountedResults.length).toBe(1);
    });
+
+   it('Updates state with input passed to it', () => {
+      let mockEvent = {target: {
+         name: 'grossPay',
+         value: 35000
+      }};
+      mountedCal.instance().handleChange(mockEvent);
+      expect( mountedCal.instance().state.grossPay ).toBe(35000);
+   });
 });

@@ -28,12 +28,13 @@ exports[`Calculator Renders correctly 1`] = `
       >
         <form
           className="theForm"
+          onSubmit={[Function]}
         >
           <div
             className="form-group"
           >
             <label
-              for="year"
+              htmlFor="year"
             >
                Taxation Year: 
             </label>
@@ -41,6 +42,8 @@ exports[`Calculator Renders correctly 1`] = `
               className="custom-select"
               id="year"
               name="year"
+              onChange={[Function]}
+              value=""
             >
               <option
                 selected={true}
@@ -59,7 +62,7 @@ exports[`Calculator Renders correctly 1`] = `
             className="form-group"
           >
             <label
-              for="grossPay"
+              htmlFor="grossPay"
             >
                Gross Income: 
             </label>
@@ -67,15 +70,16 @@ exports[`Calculator Renders correctly 1`] = `
               className="form-control"
               id="grossPay"
               name="grossPay"
+              onChange={[Function]}
               placeholder="75000"
               type="number"
+              value={0}
             />
           </div>
           <div
             className="form-group"
           >
             <label
-              for="nssf"
               style={
                 Object {
                   "display": "block",
@@ -88,15 +92,17 @@ exports[`Calculator Renders correctly 1`] = `
               className="custom-control custom-radio custom-control-inline"
             >
               <input
+                checked={false}
                 className="custom-control-input"
                 id="old"
                 name="nssf"
+                onChange={[Function]}
                 type="radio"
                 value="old"
               />
               <label
                 className="custom-control-label"
-                for="old"
+                htmlFor="old"
               >
                  Old (200) 
               </label>
@@ -105,15 +111,17 @@ exports[`Calculator Renders correctly 1`] = `
               className="custom-control custom-radio custom-control-inline"
             >
               <input
+                checked={false}
                 className="custom-control-input"
                 id="new"
                 name="nssf"
+                onChange={[Function]}
                 type="radio"
                 value="new"
               />
               <label
                 className="custom-control-label"
-                for="new"
+                htmlFor="new"
               >
                  New (Tiered) 
               </label>
@@ -126,14 +134,17 @@ exports[`Calculator Renders correctly 1`] = `
               className="custom-control custom-checkbox"
             >
               <input
+                checked={false}
                 className="custom-control-input"
                 id="isExempted"
                 name="isExempted"
+                onChange={[Function]}
                 type="checkbox"
+                value="true"
               />
               <label
                 className="custom-control-label"
-                for="isExempted"
+                htmlFor="isExempted"
               >
                  I have Disability Tax Exemption Certificate 
               </label>
@@ -187,7 +198,15 @@ exports[`Calculator Renders correctly 1`] = `
                  Gross Income: 
               </td>
               <td>
-                 0 
+                 Year: 
+                
+                 - GrossPay: 
+                0
+                 - NSSF: 
+                
+                 - isExempted: 
+                false
+                 
               </td>
             </tr>
             <tr>

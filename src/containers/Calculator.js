@@ -11,23 +11,47 @@ class Calculator extends Component {
          year: '',
          grossPay: 0,
          nssf: '',
-         isExempted: false
+         isExempted: 'false'
       };
       
    }
+
+   handleChange = (e) => {
+      let name = e.target.name;
+
+      if (e.target.name === 'isExempted') {
+         this.setState( (prevState) => {
+            let isChecked = prevState.isExempted === 'false' ? 'true' : 'false';
+            return {
+               isExempted: isChecked
+            }
+         });
+
+      } else {
+         this.setState({
+            [name]: e.target.value
+         });
+      }
+
+   };
+
+   onSubmit = (e) => {
+      e.preventDefault();
+      alert('Hola! Am now on the parent Component!');
+   };
 
    render() {
       return (
          <div className="row">
             <div className="col-12 cal-wrapper">
                <Header headerType="h1" headerText="PAYE Calculator" />
-               <Form />
+               <Form {...this.state} changeHandler={this.handleChange} onSubmit={this.onSubmit} />
             </div>
 
             <div className="w-100"></div>
 
             <div className="col-12">
-               <Results />
+               <Results {...this.state} />
             </div>
          </div>
       );
