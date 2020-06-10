@@ -15,7 +15,9 @@ class Calculator extends Component {
          nssf: '',
          isExempted: false,
          payeCal: {}
-      }; 
+      };
+      
+      this.resultsRef = React.createRef();
    }
 
    handleChange = (e) => {
@@ -42,7 +44,7 @@ class Calculator extends Component {
       let nssfValue;
       
       if (this.state.nssf === 'new') {
-         nssfValue = calculateNssf(+this.state.grossPay); 
+         nssfValue = calculateNssf(+this.state.grossPay);
       } else {
          nssfValue = 200;
       }
@@ -53,6 +55,9 @@ class Calculator extends Component {
          this.setState({
             payeCal: payeResults
          });
+
+         this.resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+
       } else {
          console.log("Oops! Can't compute Paye!");
       }
@@ -70,7 +75,7 @@ class Calculator extends Component {
             <div className="w-100"></div>
 
             <div className="col-12">
-               <Results {...this.state.payeCal} />
+               <Results {...this.state.payeCal} refProps={this.resultsRef} />
             </div>
          </div>
       );

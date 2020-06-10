@@ -5,7 +5,7 @@ import '../scss/Results.scss';
 class Results extends Component {
    render() {
       return (
-         <div className="row results-wrapper">
+         <div className="row results-wrapper" ref={this.props.refProps}>
             <div className="col-12">
                <Header headerType="h3" headerText="Results" />
 
