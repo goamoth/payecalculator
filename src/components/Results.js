@@ -13,27 +13,27 @@ class Results extends Component {
                   <tbody>
                      <tr>
                         <td> Gross Income: </td>
-                        <td> { this.props.grossPay } </td>
+                        <td> { this.props.grossPay ? (this.props.grossPay).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> NSSF Contribution: </td>
-                        <td> { this.props.nssf } </td>
+                        <td> { this.props.nssf ? (this.props.nssf).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Total Deduction: </td>
-                        <td> { this.props.totalDeductions } </td>
+                        <td> { this.props.totalDeductions ? (this.props.totalDeductions).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Taxable Income: </td>
-                        <td> { this.props.taxablePay } </td>
+                        <td> { this.props.taxablePay ? (this.props.taxablePay).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> Personal Relief: </td>
-                        <td> { this.props.relief } </td>
+                        <td> { this.props.relief ? (this.props.relief).toLocaleString() : 0 } </td>
                      </tr>
                      <tr>
                         <td> PAYE: </td>
-                        <td> { this.props.paye } </td>
+                        <td> { this.props.paye ? (this.props.paye).toLocaleString() : 0 } </td>
                      </tr>
                   </tbody>
                </table>
