@@ -1,3 +1,4 @@
+## DONE
 # Static App Should Haves
 1. The header should have h1 title with text 'PAYE Calculator'.
 2. There should be a form to calculate PAYE.
@@ -31,3 +32,8 @@
 21. Results section should have h3 title with text 'Results'.
 22. Displays a table with rows for each property of the returned results.
 23. Should be displayed on the Calculator component below the form.
+
+## TO DO
+1. Add other rates, e.g. 2020 before Covid-19, 2019, 2018, etc.
+2. Add proper form validation.
+3. Correct componentWillUpdate method to only execute whn submit button is clicked.
